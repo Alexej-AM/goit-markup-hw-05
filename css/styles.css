@@ -174,11 +174,14 @@ background-repeat: no-repeat;
 .button {
   color: var(--white-color);
   background-color: var(--blue-color);
+  border: transparent;
+  border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  padding: 10px 32px;
   cursor: pointer;
 }
 
@@ -393,7 +396,7 @@ background-repeat: no-repeat;
   line-height: 1.6;
   cursor: pointer;
 
-  transition: color 250ms var(--transition-timing-function), background-color 250ms var(--transition-timing-function); box-shadow 250ms var(--transition-timing-function);
+  transition: color 250ms var(--transition-timing-function), background-color 250ms var(--transition-timing-function), box-shadow 250ms var(--transition-timing-function);
 }
 .visually-hidden {
   position: absolute;
@@ -611,7 +614,7 @@ transition: background-color 250ms var(--transition-timing-function);
   content: '';
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -658,6 +661,9 @@ visibility: visible;
   0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+.modal-icon{
+  cursor: pointer;
+}
 
 .gallery-block{
   display: flex;
@@ -671,14 +677,7 @@ align-items: center;
  background-color: rgba(47, 48, 58, 0.8);
 }
 .galery-text{
-  
-/* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  font-weight: 700;
-  text-transform: uppercase; */
+ 
   color: #ffffff;
   font-weight: 700;
  
@@ -730,12 +729,47 @@ font-weight: 400;
   font-size: 18px;
 line-height: 1.6;
   color: var(--white-color);
+}
 
-  /* opacity: 0;
-  transition: opacity 250ms var(--transition-timing-function);
-  }
+.form-footer{
+ margin-left: 93px;
+position: relative;
+}
+.form-input{
+  display: inline-block;
+  width: 358px;
   
-  .product-link:hover .product-text,
-  .product-link:focus .product-text{
-    opacity: 1;
-  } */
+  background-color: #2F303A;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+}
+
+.form-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+width: 200px;
+  height: 50px;
+margin-left: 12px;
+color: #ffffff;
+ background-color: var(--blue-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+}
+.form-icon{
+  fill: var(--white-color);
+  margin-left: 10px;
+  
+}
+.form{
+  display: flex;
+}
+.form-text{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+}
